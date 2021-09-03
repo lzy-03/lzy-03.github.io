@@ -1,0 +1,777 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project		:    Luziyue
+Version		:    1.0
+Primary use	:    Personal Blog
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ Home Page Layout]
+1. Body
+    2. Main Navigation
+        2.1. Header
+    3. Content 
+        3.1. About Me
+        3.2. My Skills
+		3.3. Work Experiance
+		3.4. My Work
+		3.5. How to Work
+		3.6. Freelancer
+		3.7. Contact Me  
+    4. Footer 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ About Me Page Layout]
+1. Body
+    2. Main Navigation
+        2.1. Header
+    3. Content 
+		3.1. Breadcrumb Navigation
+        3.1. Content 
+    4. Footer 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ Blog Page Layout]
+1. Body
+    2. Main Navigation
+    3. Content 
+		3.1. Breadcrumb Navigation
+        3.2. Content 
+			3.2.1. Left Column
+				3.2.1.1. Blog Content
+				3.2.1.2. Blog Pagination
+			3.2.2. Right Column / Sidebar
+				3.2.2.1. Blog Search
+				3.2.2.2. Recent Post
+				3.2.2.3. Blog Category
+				3.2.2.4. Blog Tags
+				3.2.2.5. Blog Archive Date
+    4. Footer 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ Single Blog Page Layout]
+1. Body
+    2. Main Navigation
+    3. Breadcrumb Navigation 
+	4. Blog Title
+	5. Blog Created Date
+	6. Content
+		6.1. Left Column
+			6.1.1. Blog Content
+			6.1.2. Share Blog on Social Media
+			6.1.3. Next/Previous Blog Navigation
+			6.1.4. Releted Blog
+			6.1.5. Blog Comments
+			6.1.6. Blog Comment Reply
+			6.1.7. Leave a Reply Form
+		6.2. Right Column / Sidebar
+			6.2.1. Blog Search
+			6.2.2. Recent Post
+			6.2.3. Blog Category
+			6.2.4. Blog Tags
+			6.2.5. Blog Archive Date 
+    7. Footer 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ Contact Page Layout]
+1. Body
+    2. Main Navigation
+    3. Breadcrumb Navigation 
+	4. Contact Content
+		4.1. Email Address
+		4.2. Phone Number 
+		4.3. Address
+		4.4. Social Icon
+	5. Left Column
+		6.1. Contact Form	
+	6. Right Column	
+		6.1. Google Map  
+    7. Footer 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ 404 Page Layout]
+1. Body
+    2. Main Navigation
+    3. Breadcrumb Navigation 
+	4. Title
+	5. Social Icon
+	6. Home & Contact Button
+	7. Footer
+-------------------------------------------------------------------*/ 
+
+/*------------------------------------------------------------------
+[ Portfolio Page Layout]
+1. Body
+    2. Main Navigation
+    3. Breadcrumb Navigation 
+	4. Content
+		4.1. Portfolio Category Tab
+		4.2. Portfolio Content
+			4.2.1. Portfolio Block
+				4.2.1.1. Portfolio Image
+				4.2.1.2. Portfolio Title
+				4.2.1.3. Portfolio Modal
+	7. Footer
+-------------------------------------------------------------------*/ 
+
+/* Comman CSS for use all pages*/
+*{
+	font-family: 'Noto Sans SC', sans-serif;
+}
+/* [Typography] */
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-SemiBoldItalic;
+    src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
+}
+a:hover {
+	text-decoration:none !important;
+}
+a:focus {
+    border-color: #5761a6 !important;
+	box-shadow: none !important;
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+a{
+	transition:all 320ms ease-in-out;
+	-moz-transition:all 320ms ease-in-out;
+	-ms-transition:all 320ms ease-in-out;
+	-o-transition:all 320ms ease-in-out;
+	-webkit-transition:all 320ms ease-in-out;
+}
+body {
+	background-color:#f4f8fa !important;
+}
+.container-fluid {
+	padding:0px !important;	
+}
+.modal-title {
+	font-family: Montserrat-Bold;
+    color: #5761a6;
+    margin-right: 20px;
+    font-size: 24px;
+}
+.modal-body {
+	font-family: Montserrat-Light;
+	color:#fff;
+	text-align:left;
+}
+.pro-date, .pro-client, .pro-category {
+	font-family: Montserrat-Regular !important;
+    color: #5761a6 !important;
+    margin-bottom: 0px;
+	text-align:center;
+}
+.model-img {
+	margin:0px auto;
+	width:100%;	
+}
+.modal-footer {
+    justify-content: center !important;
+    border-top: none !important;
+	padding-top:0px !important;
+}
+.btn-close{
+	color: #ffffff;
+    font-family: Montserrat-Medium;
+    padding: 7px 16px 5px 16px;
+    background-color: #5761a6;
+    cursor: pointer;
+}
+
+/* Top Page Scrolling Arrow */
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffd966;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 11px;
+    top: 7px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: #ffc107;
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+/* Main Navigation */
+.navbar {
+	padding-top:26px !important;
+	padding-bottom:26px !important;
+	background-color:#FFFFFF;
+}
+.navbar .navbar-nav .nav-item a {
+	font-family: Montserrat-Regular;
+	color:#7d7d7d !important;
+	text-transform:uppercase;
+    position: relative;
+   	display: block;	
+} 
+.navbar-nav>li>a:after {
+	transition:all 320ms ease-in-out;
+	-moz-transition:all 320ms ease-in-out;
+	-ms-transition:all 320ms ease-in-out;
+	-o-transition:all 320ms ease-in-out;
+	-webkit-transition:all 320ms ease-in-out;
+}
+.navbar .navbar-nav .nav-item a span {
+	color:#ffc107 !important;
+}
+.navbar .navbar-nav .nav-item a:hover {
+	color:#5761a6 !important;
+}
+.navbar .navbar-nav .nav-item a:hover:after {
+	opacity:1;
+	bottom:4px;
+}	
+.navbar .navbar-nav .nav-item a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 70%;
+    left: 16%;
+    height: 2px;
+    background-color: #5761a6;
+    opacity: 0;	
+}	
+.navbar .navbar-nav .nav-item a:before {
+    content: '/';
+    position: absolute;
+    left: -3%;
+	color:#7d7d7d !important;
+}	
+.navbar .navbar-nav .nav-item:first-child a:before {
+	content: none !important;	
+}
+.navbar .navbar-nav .nav-item .active:after {
+	content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 70%;
+    left: 16%;
+    height: 2px;
+    background-color: #5761a6;
+    opacity: 1;
+}
+.nav-pills .nav-link.active {
+    background-color: #ffffff !important;
+}
+.navbar .navbar-nav .nav-item .active {
+	color:#5761a6 !important;	
+}
+
+/* Footer */
+footer p{
+	font-family: Montserrat-Regular;
+	text-align:center;
+	color: #9b9b9b;
+	text-transform:uppercase;
+}
+
+
+/*=========================================
+		Home Page CSS Start Here
+=========================================*/
+
+/* Header Top Section*/
+.header-top{
+    margin-top:97px;
+    background-image: linear-gradient(rgba(4,9,30,0.3),#3d459670),url(../img/hello-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	height: 500px;
+}
+.hello {
+   	background-image:url(../img/hello.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+	padding: 10px 10px 23px 25px;
+	margin-top:90px;
+}
+.hello h2 {
+	color:#ffffff;
+	text-transform:uppercase;
+	font-family: Montserrat-Medium;
+}
+.name h1 span:first-child {
+font-size: 30px;
+	color:#ffffff;
+	letter-spacing: 4px;
+}
+.name h1 span:last-child {
+font-weight: 700;
+	color:#ec7249;
+	font-size: larger;
+	letter-spacing: 4px;
+}
+.name h5{
+	
+	color:#fff;
+	letter-spacing: 2px;
+}
+.resume a {
+	color:#ffffff;
+	font-family: Montserrat-Medium;
+	padding:8px 16px;
+	background-color:#5761a6;
+	border:1px solid #5761a6;
+}
+.resume a:hover {
+	color:#5761a6;
+	border:1px solid #5761a6;
+	background-color:#FFFFFF;
+}
+.social {
+	margin-top:90px;
+	background-color:#ffffff;
+	display:inline-block;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+.social a {
+	color:#a8b3b9;
+	font-size:24px;
+	padding:5px 10px;
+}
+.social a:first-child {
+	padding-left:18px !important;
+}
+
+.social a:last-child {
+	padding-right:18px;
+}
+.social a:hover {
+	color:#5761a6;
+}
+
+/* About Me Section */
+.about-me-heading h1 {
+    padding-right: 30px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 40px 40px 0px;
+    background-color: #ffffff;
+    display: inline-block;
+    padding-left: 9%;
+}
+.about-me-heading h1 span:first-child {
+	font-family: Montserrat-Light;
+	color:#868686;
+}
+.about-me-heading h1 span:last-child{
+	font-family: Montserrat-Bold;
+	color:#5761a6;
+}
+.about-content p {
+line-height: 30px;
+	color:#868686;
+	text-align: justify;
+	font-weight: 300;
+	width: 40rem;
+}
+.myPhoto{
+	position: absolute;
+	right: 25rem;
+	top: 39rem;
+	display: inline;
+	max-width: 80px;
+
+
+}
+
+
+
+/* My Work Section*/
+#my-work {
+	background-color:#FFF;	
+}
+.work-title h1 span:first-child {
+	font-family: Montserrat-Light;
+	color:#868686;
+}
+.work-title h1 span:last-child {
+	font-family: Montserrat-Bold;
+	color:#5761a6;
+}
+.tabs-wrapper .nav .nav-item a {
+    padding: 5px 18px;
+    color: #868686;
+    border-radius: 30px;
+    font-family: Montserrat-Regular;
+	display: inline-block;
+	font-weight:700;
+	text-transform:uppercase;
+	font-size:13px;
+}
+.tabs-wrapper .nav .nav-item {
+	margin-bottom:8px;	
+}
+.tabs-wrapper .nav .nav-item .active {
+	background-color: #ffc107;
+    color: #ffffff;
+    border-radius: 15px;
+}
+.portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+	height:200px;
+}
+.portfolio-item .portfolio-link img {
+	width:100%;
+	height:100% !important;
+}
+.portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    opacity: 0;
+    background: rgba(254,209,54,.9);
+}
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: #fff;
+}
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+.portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-transform:uppercase;
+    background-color: #fff;
+	font-family: Montserrat-Medium;
+	text-align:center;
+}
+.portfolio-item .portfolio-caption p:hover {
+	color: #5761a6;
+}
+.portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+/* Freelance Section*/
+#freelance {
+	background-image:url(../img/123.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	padding-top: 60px;
+    padding-bottom: 50px;
+	margin-top: 130px;
+}
+.freelance-text h2 {
+	font-family: Montserrat-bold;
+	color: #fff;
+
+}
+
+.freelance-text h5 {
+	line-height: 170%;
+	color: #fff;
+	font-family: Montserrat-light;
+}
+.freelance-text h2 span {
+	font-family: Montserrat-Bold;
+	color:#ffffff;
+
+
+
+
+/*=========================================
+		Seprate Page CSS Start Here
+=========================================*/
+/* Comman Section CSS For Seprate Page */
+.content-section {
+    margin-top: 100px;
+	margin-bottom:50px;
+}
+.content-section h2 {
+	font-family: Montserrat-Regular;
+	color:#868686;
+}
+.tlinks {text-indent: -9999px;height: 0;line-height: 0;font-size: 0;overflow: hidden;}
+.underliner{
+	position:relative;
+	margin-bottom:20px;
+}
+.underliner:before {
+	content:'';
+	position:absolute;
+	width:130px;
+	height:3px;
+	background-color: #ffc107;	
+	bottom: -5px;	
+}
+.content-section p {
+    font-family: Montserrat-Light;
+    color: #868686;
+}
+.seprate-page-title h1 span:first-child {
+    font-family: Montserrat-Light;
+    color: #fff;	
+}
+.seprate-page-title h1 span:last-child {
+    font-family: Montserrat-Bold;
+    color: #5761a6;
+}
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: transparent !important;
+	display:block !important;
+}
+ul.breadcrumb li {
+	display: inline;
+	text-align:center;
+	color: #fff;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #fff;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+	color: #5761a6;
+}
+
+
+/*=========================================
+		        Media Query
+=========================================*/
+@media only screen and (max-width: 1280px) {
+.about-me-heading h1, .work-exp-heading h1, .contact-heading h1{
+	padding-left:7%;	
+}
+.my-skill-heading h1 {
+    padding-right: 7%;
+}
+}
+
+@media only screen and (max-width: 1024px) {
+.list-group-item h4 {
+	float: none; 
+}
+.list-group-item h5 {
+    margin-top: 14px;
+}
+.skill span img {
+	width: 40%;	
+}
+.skill{
+	font-size:12px;	
+}
+.about-me-heading h1, 
+.work-exp-heading h1, 
+.contact-heading h1 {
+	padding-left:4%;	
+}
+.my-skill-heading h1 {
+    padding-right: 4%;
+}
+}
+
+@media only screen and (max-width: 992px){
+h1{
+	font-size:30px !important;	
+}
+h2{
+	font-size: 26px !important;	
+}
+h4{
+	font-size: 20px !important;	
+}
+a, p{
+	font-size:14px !important;	
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+}
+.navbar-toggler-icon {
+    width: 1em !important;
+    height: 1.2em !important;
+}
+.navbar-light .navbar-toggler {
+    border-color: #5761a6 !important;
+}
+.navbar-toggler:focus {
+    border-color: #5761a6 !important;
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+.navbar .navbar-nav .nav-item a:after{
+    content: none;
+}	
+.navbar .navbar-nav .nav-item a:before{
+    content: none;
+}
+.navbar .navbar-nav .nav-item .active:after{
+	content: none;
+}
+.header-top {
+    margin-top: 74px;
+}
+.hello {
+	margin-top: 20px;
+}
+.social {
+    margin-top: 40px;
+}
+#freelance {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.freelancer-img {
+    top: -165px;
+}
+.about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+	padding-left:14%;	
+}
+.my-skill-heading h1 {
+    padding-right: 14%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+h2{
+	font-size:24px !important;	
+}
+.about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+	padding-left:5%;	
+}
+.list-group-item h4 {
+	float:none !important;	
+}
+.list-group-item h5 {
+	margin-top:10px;
+}
+.my-skill-heading h1 {
+    padding-right: 5%;
+}
+.name h1 {
+	font-size:30px;
+}
+.social {
+    margin-top: 20px;
+}
+#freelance {
+    padding-top: 30px;
+    padding-bottom: 32px;
+}
+.freelancer-img {
+    top: -94px;
+}
+}
+
+@media only screen and (max-width: 690px) {
+.social a, .contact-social a {
+    font-size: 16px;
+}	
+}
+
+@media only screen and (max-width: 576px) {
+.skill span img {
+	width:auto !important;	
+}
+.skill{
+	font-size:14px !important;	
+}
+}
+
+@media only screen and (max-width: 480px) {
+.about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+	padding-left:4%;	
+}
+.list-group-item h4 {
+	float:none !important;	
+}
+.list-group-item h5 {
+	margin-top:10px;
+}
+.my-skill-heading h1 {
+    padding-right: 3%;
+}
+.step-line ul li {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+	margin-bottom:30px;
+}
+.step-line ul li .step {
+	display:none;
+}
+.freelancer-img {
+    position: initial;
+}
+#freelance {
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+.hire-me {
+	margin-bottom:30px;
+}
+}
