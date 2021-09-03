@@ -175,7 +175,7 @@ body {
 }
 .modal-body {
 	font-family: Montserrat-Light;
-	color:#fff;
+	color:#868686;
 	text-align:left;
 }
 .pro-date, .pro-client, .pro-category {
@@ -459,7 +459,7 @@ line-height: 30px;
 }
 .tabs-wrapper .nav .nav-item .active {
 	background-color: #ffc107;
-    color: #ffffff;
+    color: #868686;
     border-radius: 15px;
 }
 .portfolio-item .portfolio-link {
@@ -492,7 +492,7 @@ line-height: 30px;
     height: 20px;
     margin-top: -12px;
     text-align: center;
-    color: #fff;
+    color: #868686;
 }
 .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
@@ -545,58 +545,7 @@ line-height: 30px;
 		Seprate Page CSS Start Here
 =========================================*/
 /* Comman Section CSS For Seprate Page */
-.content-section {
-    margin-top: 100px;
-	margin-bottom:50px;
-}
-.content-section h2 {
-	font-family: Montserrat-Regular;
-	color:#868686;
-}
-.tlinks {text-indent: -9999px;height: 0;line-height: 0;font-size: 0;overflow: hidden;}
-.underliner{
-	position:relative;
-	margin-bottom:20px;
-}
-.underliner:before {
-	content:'';
-	position:absolute;
-	width:130px;
-	height:3px;
-	background-color: #ffc107;	
-	bottom: -5px;	
-}
-.content-section p {
-    font-family: Montserrat-Light;
-    color: #868686;
-}
-.seprate-page-title h1 span:first-child {
-    font-family: Montserrat-Light;
-    color: #fff;	
-}
-.seprate-page-title h1 span:last-child {
-    font-family: Montserrat-Bold;
-    color: #5761a6;
-}
-ul.breadcrumb {
-    padding: 8px 16px;
-    list-style: none;
-    background-color: transparent !important;
-	display:block !important;
-}
-ul.breadcrumb li {
-	display: inline;
-	text-align:center;
-	color: #fff;
-}
-ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: #fff;
-    content: "/\00a0";
-}
-ul.breadcrumb li a {
-	color: #5761a6;
-}
+
 
 
 /*=========================================
@@ -774,4 +723,5 @@ h2{
 .hire-me {
 	margin-bottom:30px;
 }
-}
+
+}}
